@@ -5,6 +5,7 @@ import 'package:my_app/pages/index.dart';
 import 'routers/routers.dart';
 import 'routers/application.dart';
 import 'package:my_app/pages/index_page.dart';
+import 'package:my_app/layout_demo/test_demo.dart';
 
 void main(){
   // final router = Router();
@@ -35,7 +36,8 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       // home: MyHomePage(title: 'Flutter Demo Home Page'),
-      home: GlobalIndexPage(),
+      // home: GlobalIndexPage(),
+      home: TestDemo(),
     );
   }
 }

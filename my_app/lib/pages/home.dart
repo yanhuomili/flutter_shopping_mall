@@ -21,7 +21,13 @@ class _HomeState extends State<Home> {
 
   void _onRefresh() async{
     await Future.delayed(Duration(seconds: 2));
+    setState(() {
+      list = [1,2,3,4,5,6,7,8,9];
+      page = 1;
+    });
+    print(page);
     _refreshController.refreshCompleted();
+    _refreshController.resetNoData();
   }
 
   void _onLoading() async{
@@ -34,12 +40,11 @@ class _HomeState extends State<Home> {
     });
     print(page);
     // if(mounted)
-    if(page == 3){
+    if(page == 6){
       _refreshController.loadNoData();
     }else{
       _refreshController.loadComplete();
     }
-
   }
 
   @override
