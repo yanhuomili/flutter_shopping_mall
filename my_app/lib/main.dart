@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:dio/dio.dart';
 import 'package:fluro/fluro.dart';
+import 'package:my_app/pages/index.dart';
 import 'routers/routers.dart';
 import 'routers/application.dart';
+import 'package:my_app/pages/index_page.dart';
 
 void main(){
   // final router = Router();
@@ -32,7 +34,8 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Flutter Demo Home Page'),
+      // home: MyHomePage(title: 'Flutter Demo Home Page'),
+      home: GlobalIndexPage(),
     );
   }
 }
